@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/persona-css-buttons/persona-buttons.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+        #{doLayout /}
+        <script src="https://login.persona.org/include.js"></script>
+        <script src="@{'/public/javascripts/app.js'}"></script>
+    </body>
+</html>
