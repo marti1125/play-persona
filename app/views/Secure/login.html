@@ -1,0 +1,33 @@
+#{extends 'main.html' /}
+#{set title:'Login' /}
+
+
+
+#{form @authenticate(), class:'form-signin' }
+
+#{if flash.error}
+Usuario o Contraseña incorrecto
+#{/if}
+#{if flash.success}
+Exito!
+&{flash.success}
+</p>
+#{/if}
+    <p>
+        <input placeholder="Usuario" class="input-block-level" type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
+    </p>
+    <p>
+        </label> <input placeholder="Contraseña" class="input-block-level" type="password" name="password" id="password" maxlength="30" required />
+    </p>
+    <p>
+        <label class="checkbox">
+            <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> Remember
+        </label>
+    </p>       
+#{/form}
+
+<p>
+    <a href="#" id="signin" class="persona-button dark"><span>Sign in with your Email</span></a>
+</p> 
+
+<script src="@{'/public/javascripts/app.js'}"></script>

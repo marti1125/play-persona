@@ -1,6 +1,9 @@
-var signinLink = document.getElementById('signin');
+$('#signin').click(function() {
+	navigator.id.request();
+});
 
-if (signinLink) {
-  signinLink.onclick = function() { navigator.id.request(); };
-};
- 
+/*var signinLink = document.getElementById('signin');
+
+signinLink.onclick = function() {
+  navigator.id.request();
+};*/

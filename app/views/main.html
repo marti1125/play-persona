@@ -11,8 +11,9 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
-        <script src="https://login.persona.org/include.js"></script>
+        #{doLayout /}        
+        <script src="@{'/public/javascripts/jquery.js'}"></script>
         <script src="@{'/public/javascripts/app.js'}"></script>
+        <script src="https://login.persona.org/include.js"></script>
     </body>
 </html>
