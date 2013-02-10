@@ -1,0 +1,7 @@
+# Test data
+
+User(willy):
+    email: willy@mozilla.pe
+    fullname: willy
+    password: 123456    
+    username: marti1125
