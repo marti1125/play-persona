@@ -12,7 +12,7 @@
 			onlogin : null,
 			onfail : null,
 			onlogout : null,
-			server : 'login.php'
+			server : '/login'
 		}
 	var methods = {
 		init : function (settings) {
