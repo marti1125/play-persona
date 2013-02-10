@@ -11,9 +11,13 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}        
-        <script src="@{'/public/javascripts/jquery.js'}"></script>
-        <script src="@{'/public/javascripts/app.js'}"></script>
-        <script src="https://login.persona.org/include.js"></script>
+        #{doLayout /}
+        <!-- Check for support for browserid in the browser, fallback to loading the polyfill  -->
+        <script>navigator.id || document.write('<script src="//browserid.org/include.js"><\/script>')</script>
+        <!-- Load jquery from google's CDN + fallback - stolen from h5bp.com-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+        <script src="@{'/public/javascriptsjquery.browserid.js'}"></script>  
+        <script src="@{'/public/javascripts/app.js'}"></script>        
     </body>
 </html>
